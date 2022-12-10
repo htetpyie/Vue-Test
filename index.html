@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Test</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h3>Vue3 Learning</h3>
+    <div id="app">
+        <div v-if="showBook">
+            <div>{{title}}</div>
+            <div>{{author}}</div>
+            <div>{{age}}</div>
+            <button v-on:click="age++">Age+</button>
+        </div>
+        <br><br>        
+        <button @click="showBook = !showBook">
+            <span v-if="showBook">Hide</span>
+            <span v-if="!showBook">Show</span>
+        </button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
